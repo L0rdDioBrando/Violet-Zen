@@ -1,0 +1,406 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rosewater: #f4dbd6;
+    --flamingo: #f0c6c6;
+    --pink: #f5bde6;
+    --mauve: #c6a0f6;
+    --red: #ed8796;
+    --maroon: #ee99a0;
+    --peach: #f5a97f;
+    --yellow: #eed49f;
+    --green: #a6da95;
+    --teal: #8bd5ca;
+    --sky: #91d7e3;
+    --sapphire: #7dc4e4;
+    --blue: #8aadf4;
+    --lavender: #b7bdf8;
+    --text: #cad3f5;
+    --subtext1: #b8c0e0;
+    --subtext0: #a5adcb;
+    --overlay2: #939ab7;
+    --overlay1: #8087a2;
+    --overlay0: #6e738d;
+    --surface2: #5b6078;
+    --surface1: #494d64;
+    --surface0: #363a4f;
+    --base: #24273a;
+    --mantle: #1e2030;
+    --crust: #181926;
+    --accent: var(--lavender);
+    --zen-primary-color: var(--accent) !important;
+    --zen-colors-primary: var(--crust) !important;
+    --zen-colors-secondary: var(--surface0) !important;
+    --zen-colors-tertiary: var(--mantle) !important;
+    --zen-colors-border: var(--accent) !important;
+    --zen-sidebar-themed-icon-fill: var(--accent) !important;
+    --toolbarbutton-icon-fill: var(--accent) !important;
+    --toolbox-textcolor: var(--text) !important;
+    --lwt-text-color: var(--text) !important;
+    --toolbar-field-color: var(--text) !important;
+    --tab-selected-textcolor: var(--text) !important;
+    --toolbar-field-focus-color: var(--text) !important;
+    --toolbar-color: var(--text) !important;
+    --newtab-text-primary-color: var(--text) !important;
+    --arrowpanel-color: var(--text) !important;
+    --arrowpanel-background: var(--base) !important;
+    --sidebar-text-color: var(--text) !important;
+    --lwt-sidebar-text-color: var(--text) !important;
+    --lwt-sidebar-background-color: var(--crust) !important;
+    --toolbar-bgcolor: var(--surface0) !important;
+    --newtab-background-color: var(--base) !important;
+    --zen-themed-toolbar-bg: var(--mantle) !important;
+    --zen-main-browser-background: var(--mantle) !important;
+    --toolbox-bgcolor-inactive: var(--mantle) !important;
+    --download-progress-flare-color: var(--text) !important;
+    --button-text-color: var(--text) !important;
+    --button-text-color-menu: var(--text) !important;
+    --button-text-color-menu-hover: var(--text) !important;
+    --button-background-color-hover: var(--mantle) !important;
+  }
+
+  /* Popup menu */
+  :is(menupopup, panel) {
+    &::part(content) {
+      border: none;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  menu,
+  menuitem,
+  menucaption menupopup,
+  menuseparator {
+    color: var(--text) !important;
+  }
+
+  :is(panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]),
+      [overflowedItem="true"]) > toolbarbutton) {
+    color: var(--text) !important;
+    fill: var(--accent) !important;
+  }
+
+  .subview-subheader {
+    color: var(--subtext0) !important;
+  }
+
+  /* Workspaces */
+  .zen-current-workspace-indicator-chevron,
+  .zen-workspace-icon[active],
+  .zen-workspaces-button {
+    color: var(--accent) !important;
+    fill: var(--accent) !important;
+  }
+
+  #zen-workspaces-button .subviewbutton {
+    &:hover {
+      background-color: var(--mantle);
+    }
+  }
+
+  #zen-workspaces-button .subviewbutton[active] {
+    position: relative;
+    overflow: hidden !important;
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+    transition: transform 0.15s ease-out !important;
+  }
+
+  .zen-current-workspace-indicator-name {
+    color: var(--text) !important;
+  }
+
+  .zen-workspace-creation-name-wrapper,
+  .zen-workspace-creation-profile-wrapper,
+  .zen-workspace-creation-edit-theme-button {
+    background-color: var(--text) !important;
+  }
+
+  /* Tabs */
+  .tab-label,
+  .tab-text {
+    color: var(--text) !important;
+  }
+
+  .tab-background:is([selected], [multiselected]) {
+    background-color: var(--surface0) !important;
+  }
+
+  .tabbrowser-tab::before {
+    content: "";
+    background: var(--mantle);
+  }
+
+  .tabbrowser-tab:hover::before {
+    background: var(--mantle);
+  }
+
+  .tab-close-button,
+  .tab-reset-button {
+    color: var(--accent) !important;
+  }
+
+  .tab-icon-image {
+    fill-opacity: 1.0 !important;
+    fill: var(--accent) !important;
+  }
+
+  .pinned-tabs-container-separator {
+    color: var(--subtext0) !important;
+  }
+
+  .pinned-tabs-container-separator:hover {
+    color: var(--subtext1) !important;
+  }
+
+  scrollbox {
+    scrollbar-width: none !important;
+  }
+
+  /* Urlbar */
+  .urlbar-background {
+    color: var(--text);
+    background-color: var(--base) !important;
+    outline: none !important;
+  }
+
+  .urlbarView-row,
+  .urlbarView-favicon,
+  .urlbarView-action,
+  .urlbarView-title,
+  .urlbarView-title-separator {
+    color: var(--text) !important;
+  }
+
+  .urlbar-icon,
+  .identity-box-button {
+    fill: var(--subtext0) !important;
+  }
+
+  #identity-box:not(.chromeUI) #identity-icon-label {
+    color: var(--text) !important;
+  }
+
+  #zen-copy-url-button[disabled] {
+    opacity: 1.0 !important;
+  }
+
+  #urlbar-input {
+    color: var(--text) !important;
+  }
+
+  #urlbar {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .urlbar {
+    --urlbarview-separator-color: transparent !important;
+  }
+
+  .urlbarView-url {
+    color: var(--accent) !important;
+  }
+
+  /* Toolbar */
+  .titlebar-buttonbox-container {
+    display: none !important;
+  }
+
+  .content-shortcuts {
+    background-color: var(--base) !important;
+    border-color: var(--accent) !important;
+  }
+
+  #zenEditBookmarkPanelFaviconContainer {
+    background: var(--crust) !important;
+  }
+
+  toolbar .toolbarbutton-1 {
+    &:not([disabled]) {
+
+      &:is([open], [checked])> :is(.toolbarbutton-icon,
+        .toolbarbutton-text,
+        .toolbarbutton-badge-stack) {
+        fill: var(--crust) !important;
+      }
+    }
+  }
+
+  #zen-library-side {
+    background: var(--crust) !important;
+  }
+
+  .zen-library-media-opt-in {
+    background-color: var(--base) !important;
+    border: none !important;
+  }
+
+  #TabsToolbar {
+    background-color: var(--crust) !important;
+  }
+
+  .toolbarbutton-1 {
+    fill: var(--accent) !important;
+  }
+
+  #zen-sidebar-foot-buttons,
+  #zen-site-data-icon-button {
+    color: var(--subtext0) !important;
+  }
+
+  #zen-appcontent-navbar-container {
+    background-color: var(--crust) !important;
+  }
+
+  #permissions-granted-icon {
+    color: var(--mantle) !important;
+  }
+
+  #zen-browser-background {
+    --zen-main-browser-background: var(--crust) !important;
+  }
+
+  #PanelUI-menu-button,
+  .toolbarbutton-1 {
+    color: var(--accent) !important;
+  }
+
+  #nav-bar,
+  #zen-sidebar-web-panel {
+    background-color: var(--crust) !important;
+  }
+
+  .sidebar-placesTree {
+    background-color: var(--base) !important;
+  }
+
+  #appMenu-zoom-controls {
+    color: var(--text);
+  }
+
+  hbox#titlebar {
+    background-color: var(--crust) !important;
+  }
+
+  /* Media */
+  #zen-media-focus-button,
+  #zen-media-mute-button,
+  #zen-media-playpause-button,
+  #zen-media-nexttrack-button,
+  #zen-media-previoustrack-button,
+  #zen-media-close-button {
+    color: var(--text) !important;
+
+    &:hover {
+      color: var(--text) !important;
+    }
+  }
+
+  #zen-media-progress-bar {
+    color: var(--accent) !important;
+    background-color: var(--surface0) !important;
+    border: none !important;
+
+    :-moz-range-progress {
+      color: var(--accent) !important;
+    }
+  }
+
+  #zen-media-focus-button {
+    fill: var(--subtext1) !important;
+  }
+
+  #zen-media-mute-button {
+    fill: var(--subtext0) !important;
+  }
+
+  #zen-media-playpause-button,
+  #zen-media-nexttrack-button,
+  #zen-media-previoustrack-button,
+  #zen-media-close-button {
+    fill: var(--text) !important;
+  }
+
+  #zen-media-controls-toolbar>toolbaritem {
+    position: relative;
+    border-radius: 12px !important;
+    border: none !important;
+    background-color: var(--mantle) !important;
+
+    &:hover {
+      border-radius: 12px !important;
+      border: none !important;
+      background: var(--mantle) !important;
+      box-shadow: none !important;
+    }
+  }
+
+  #zen-media-service-hbox {
+    padding-top: 5px !important;
+    transition: padding 0.15s ease-in-out !important;
+  }
+
+  .zen-media-card {
+    color: var(--text) !important;
+    border: none !important;
+  }
+
+  #zen-media-title {
+    font-weight: 720 !important;
+    color: var(--text) !important;
+  }
+
+  #zen-media-artist {
+    font-size: 10px !important;
+    color: var(--subtext0) !important;
+  }
+
+  #zen-media-info-vbox::before {
+    display: none !important;
+  }
+
+  /* Colors */
+  .identity-color-blue {
+    --identity-tab-color: var(--blue) !important;
+    --identity-icon-color: var(--blue) !important;
+  }
+
+  .identity-color-turquoise {
+    --identity-tab-color: var(--teal) !important;
+    --identity-icon-color: var(--teal) !important;
+  }
+
+  .identity-color-green {
+    --identity-tab-color: var(--green) !important;
+    --identity-icon-color: var(--green) !important;
+  }
+
+  .identity-color-yellow {
+    --identity-tab-color: var(--yellow) !important;
+    --identity-icon-color: var(--yellow) !important;
+  }
+
+  .identity-color-orange {
+    --identity-tab-color: var(--peach) !important;
+    --identity-icon-color: var(--peach) !important;
+  }
+
+  .identity-color-red {
+    --identity-tab-color: var(--red) !important;
+    --identity-icon-color: var(--red) !important;
+  }
+
+  .identity-color-pink {
+    --identity-tab-color: var(--pink) !important;
+    --identity-icon-color: var(--pink) !important;
+  }
+
+  .identity-color-purple {
+    --identity-tab-color: var(--mauve) !important;
+    --identity-icon-color: var(--mauve) !important;
+  }
+}
